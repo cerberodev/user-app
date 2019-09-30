@@ -7,7 +7,7 @@ const faker =require('faker');
 
 router.get('/api/users', async (req, res) => {
     const users = await User.find();
-    res.json(users);
+    res.json({users});
     //res.json('User list');
 });
 
