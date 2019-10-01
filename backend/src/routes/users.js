@@ -12,14 +12,14 @@ router.get('/api/users', async (req, res) => {
 });
 
 router.get('/api/users/create', async (req, res) => {
-    for (let i = 0; i < 5 ; i++){
+    for (let i = 0; i < 1999 ; i++){
         await User.create({
             firstName: faker.name.firstName(),
             lastName: faker.name.lastName(),
             avatar: faker.image.avatar()
         });
     }
-    res.json({message: '5 Users created'});
+    res.json({message: '1999 Users created'});
 });
 
 
